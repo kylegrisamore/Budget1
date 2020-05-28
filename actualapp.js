@@ -167,13 +167,7 @@ var UIController = (function() {
 
     var formatNumber = function(num, type) {
         var numSplit, int, dec, type;
-        /*
-            + or - before number
-            exactly 2 decimal points
-            comma separating the thousands
-            2310.4567 -> + 2,310.46
-            2000 -> + 2,000.00
-            */
+
 
         num = Math.abs(num);
         num = num.toFixed(2);
@@ -211,7 +205,7 @@ var UIController = (function() {
 
         addListItem: function(obj, type) {
             var html, newHtml, element;
-            // Create HTML string with placeholder text
+
 
             if (type === 'inc') {
                 element = DOMstrings.incomeContainer;
