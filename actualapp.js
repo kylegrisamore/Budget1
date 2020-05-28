@@ -75,10 +75,6 @@ var budgetController = (function() {
         deleteItem: function(type, id) {
             var ids, index;
 
-            // id = 6
-            //data.allItems[type][id];
-            // ids = [1 2 4  8]
-            //index = 3
 
             ids = data.allItems[type].map(function(current) {
                 return current.id;
@@ -114,15 +110,7 @@ var budgetController = (function() {
 
         calculatePercentages: function() {
 
-            /*
-            a=20
-            b=10
-            c=40
-            income = 100
-            a=20/100=20%
-            b=10/100=10%
-            c=40/100=40%
-            */
+
 
             data.allItems.exp.forEach(function(cur) {
                 cur.calcPercentage(data.totals.inc);
